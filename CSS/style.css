@@ -301,6 +301,39 @@ ul {
   margin-right: 30px;
 }
 
+.product-actions {
+  position: relative;
+}
+
+.product-actions > .example {
+  position: absolute;
+
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #ffffff;
+
+  padding: 27px 0;
+
+  width: 100%;
+  height: 70px;
+
+  background: rgba(47, 48, 58, 0.8);
+
+  bottom: 0;
+  right: 0;
+  margin: 0;
+}
+
+.img-example {
+  display: block;
+}
+
 /*------------------------------------------команда-------------------------------------*/
 .team {
   background: var(--secondary-bgc);
@@ -660,6 +693,8 @@ h3 {
 .link-portfolio {
   display: block;
   text-decoration: none;
+  position: relative;
+  overflow: hidden;
 }
 
 .foto-item:nth-child(3n) {
@@ -694,4 +729,29 @@ h3 {
 .portfolio-main {
   padding-top: 94px;
   padding-bottom: 94px;
+}
+
+.link-portfolio:hover .overlay {
+  transform: translatex(0);
+}
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  bottom: 370px;
+  top: 0;
+  background: rgba(33, 150, 243, 0.9);
+
+  transform: translatey(100%);
+  transition: transform 250ms ease;
+}
+
+.overlay > p {
+  color: #fff;
+  font-size: 18px;
+  margin: 63px 24px;
+}
+
+.overlay-conteiner {
 }
