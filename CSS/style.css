@@ -693,8 +693,6 @@ h3 {
 .link-portfolio {
   display: block;
   text-decoration: none;
-  position: relative;
-  overflow: hidden;
 }
 
 .foto-item:nth-child(3n) {
@@ -732,7 +730,7 @@ h3 {
 }
 
 .link-portfolio:hover .overlay {
-  transform: translatex(0);
+  transform: translatey(0);
 }
 
 .overlay {
@@ -754,4 +752,6 @@ h3 {
 }
 
 .overlay-conteiner {
+  position: relative;
+  overflow: hidden;
 }
