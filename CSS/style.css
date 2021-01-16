@@ -122,6 +122,7 @@ ul {
 .link-header:focus {
   color: var(--accent-text-color);
 }
+
 .link-contacts {
   color: var(--secondary-text-color);
   font-weight: 500;
@@ -145,19 +146,17 @@ ul {
   background-color: var(--button-bgc);
   opacity: 0;
 
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.current.link-header::after,
-.link-header:hover::after {
+.current.link-header::after {
   opacity: 1;
 }
 
-.current,
 .link-contacts:hover,
 .link-contacts:focus {
   color: var(--accent-text-color);
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .link-header.current {
@@ -484,7 +483,7 @@ h3 {
 .icon-link:focus {
   background-color: var(--accent-text-color);
   color: #ffffff;
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .network-conteiner {
@@ -539,7 +538,7 @@ h3 {
   outline: none;
   fill: var(--button-bgc);
 
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /*-------------------------------Footer------------------------------------*/
@@ -677,7 +676,7 @@ h3 {
   color: var(--bgc-accent-text-color);
   background-color: var(--button-bgc);
 
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .text-portfolio {
@@ -719,7 +718,7 @@ h3 {
     1px 4px 6px rgba(0, 0, 0, 0.16);
   outline: none;
 
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .link-portfolio {
@@ -761,26 +760,27 @@ h3 {
   padding-bottom: 94px;
 }
 
-.link-portfolio:hover .overlay {
-  transform: translatey(0);
+.link-portfolio:hover .overlay,
+.link-portfolio:focus .overlay {
+  transform: translateY(0%);
 }
 
 .overlay {
   position: absolute;
   width: 100%;
   height: 100%;
-  bottom: 370px;
+  left: 0;
   top: 0;
+  padding: 63px 24px;
   background: rgba(33, 150, 243, 0.9);
 
-  transform: translatey(100%);
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateY(100%);
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .overlay > p {
   color: #fff;
   font-size: 18px;
-  margin: 63px 24px;
 }
 
 .overlay-conteiner {
